@@ -1,11 +1,7 @@
-import turtle
-turtle.Screen().bgcolor("red")
-turtle.Screen().setup(300,400)
-polygon = turtle.Turtle()
-num_sides = 6
-side_legth = 90
-angle = 360.0 / num_sides
-for i in range(num_sides):
-    polygon.forward(side_legth)
-    polygon.right(angle)
-turtle.done()
+def converttobinary(n):
+    if n > 1:
+        converttobinary(n//2)
+    print(n%2 , end= " ")
+dec = int(input("Enter a number to find it's binary value:"))
+converttobinary(dec)
+print()
